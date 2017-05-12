@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170510141455) do
+ActiveRecord::Schema.define(version: 20170512141501) do
 
   create_table "componentes", force: :cascade do |t|
     t.string   "nombre"
@@ -32,8 +32,13 @@ ActiveRecord::Schema.define(version: 20170510141455) do
     t.date     "fecha"
     t.integer  "empresa_id"
     t.integer  "componente_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
+    t.string   "url"
     t.index ["componente_id"], name: "index_productos_on_componente_id"
     t.index ["empresa_id"], name: "index_productos_on_empresa_id"
   end

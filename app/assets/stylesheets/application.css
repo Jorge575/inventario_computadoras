@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+
+.imagen_producto{
+	width: 360px !important;
+	height: 300px !important;
+
+}
